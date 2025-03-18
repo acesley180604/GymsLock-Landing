@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
-import { Download, Timer, Dumbbell } from "lucide-react";
+import { Timer, Dumbbell } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Hero = () => {
   return (
@@ -13,10 +13,9 @@ const Hero = () => {
           <p className="text-lg text-white/80 max-w-xl">
             Our app helps you manage screen time while encouraging gym visits. Set limits on digital usage, then scan gym equipment to unlock extended screen time.
           </p>
-          <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
-            <Download className="w-5 h-5" />
-            Download FitScreen
-          </Button>
+          
+          <ContactForm />
+          
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
               <div className="text-3xl font-bold text-white">30%</div>
