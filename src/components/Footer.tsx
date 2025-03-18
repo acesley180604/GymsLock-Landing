@@ -1,6 +1,6 @@
-
 import { Github, Twitter, Linkedin, Instagram, Timer, Dumbbell } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white flex items-center">
+            <Link to="/" className="text-2xl font-bold text-white flex items-center hover:text-white/90 transition-colors">
               <Timer className="w-5 h-5 mr-2" />
-              FitScreen
-            </h3>
+              GymLocks
+            </Link>
             <p className="text-white/60">
               Balancing digital life with physical activity. Reduce screen time, increase gym engagement.
             </p>
@@ -32,9 +32,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">App</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Gym Partners</a></li>
+              <li><Link to="/features" className="text-white/60 hover:text-white transition-colors">Features</Link></li>
+              <li><Link to="/how-it-works" className="text-white/60 hover:text-white transition-colors">How It Works</Link></li>
+              <li><Link to="#" className="text-white/60 hover:text-white transition-colors">Gym Partners</Link></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Download</a></li>
             </ul>
           </div>
@@ -62,7 +62,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-center text-white/60">
-            © 2024 FitScreen. All rights reserved.
+            © 2024 GymLocks. All rights reserved.
           </p>
         </div>
       </div>

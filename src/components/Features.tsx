@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Timer, Dumbbell, Scan, Bell, Smartphone } from "lucide-react";
 
@@ -27,9 +26,11 @@ const Features = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-white">
-              Balance Digital and Physical Wellbeing
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FF1CF7] via-[#b249f8] via-[#00DDEB] to-[#00F0FF]">
+                Balance Digital and Physical Wellbeing
+              </h2>
+            </div>
             <p className="text-xl text-white/60">
               Our app helps you manage screen time and promotes physical activity. Set limits on your digital usage, then extend your time by visiting the gym and scanning equipment.
             </p>

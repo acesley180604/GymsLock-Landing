@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Apple, Play, Smartphone, Dumbbell } from "lucide-react";
 
@@ -16,11 +15,13 @@ const Download = () => {
               <Dumbbell className="w-6 h-6 text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Start Your Digital-Physical Balance Today
-          </h2>
+          <div className="inline-block">
+            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FF1CF7] via-[#b249f8] via-[#00DDEB] to-[#00F0FF]">
+              Start Your Digital-Physical Balance Today
+            </h2>
+          </div>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Download FitScreen now and transform your relationship with screen time while improving your fitness habits.
+            Download GymLocks now and transform your relationship with screen time while improving your fitness habits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
