@@ -31,12 +31,29 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative grid grid-cols-2 gap-4">
+          {/* Locked phone image */}
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1200&auto=format&fit=crop"
-              alt="Person checking FitScreen app on smartwatch"
-              className="w-full h-auto"
+              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+              alt="Locked smartphone with FitScreen app"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="text-white text-center p-4">
+                <Dumbbell className="w-10 h-10 mx-auto mb-2" />
+                <div className="text-sm">Screen Locked</div>
+                <div className="text-xs mt-1">Visit gym to unlock</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Young male with improved gym performance */}
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?q=80&w=1200&auto=format&fit=crop"
+              alt="Young male showing improved gym performance"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
