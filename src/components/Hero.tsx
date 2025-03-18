@@ -18,11 +18,11 @@ const Hero = () => {
           
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">30%</div>
+              <div className="text-3xl font-bold text-white">80%</div>
               <div className="text-white/60">Reduced screen time</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">65%</div>
+              <div className="text-3xl font-bold text-white">85%</div>
               <div className="text-white/60">More gym visits</div>
             </div>
             <div>

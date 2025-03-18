@@ -47,7 +47,7 @@ const ContactForm = () => {
           className="w-full bg-white text-black hover:bg-white/90 flex items-center gap-2 py-6"
         >
           <Mail className="w-5 h-5" />
-          Stay Updated
+          Get Early Access
         </Button>
       </form>
     </div>

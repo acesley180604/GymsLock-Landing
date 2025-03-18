@@ -5,19 +5,19 @@ import { MessageSquare } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "FitScreen helped me reduce my screen time by 40% and I've been going to the gym 3 times a week now!",
-      author: "Sarah Johnson",
-      role: "Marketing Professional"
+      quote: "I was addicted to my phone, constantly scrolling for hours. FitScreen helped me cut my screen time by 80% and motivated me to hit the gym regularly.",
+      author: "Alex, 28",
+      role: "Software Developer"
     },
     {
-      quote: "The QR scanner feature makes it fun to track my gym sessions. It's like a game that rewards me with more screen time.",
-      author: "Michael Chen",
-      role: "Software Engineer"
+      quote: "As someone who struggled with getting off the couch, the gym equipment scanning feature was a game-changer. Now I'm seeing actual progress in my fitness journey.",
+      author: "Jason, 24",
+      role: "Marketing Specialist"
     },
     {
-      quote: "As a parent, I love how this app encourages my teenagers to balance screen time with physical activity.",
-      author: "Emma Davis",
-      role: "Parent of two"
+      quote: "I was always too lazy to go to the gym after work. This app gave me the push I needed. My focus has improved dramatically both at work and during workouts.",
+      author: "Ryan, 30",
+      role: "Financial Analyst"
     }
   ];
 
@@ -29,7 +29,7 @@ const Testimonials = () => {
           What Our Users Say
         </h2>
         <p className="text-xl text-white/60 text-center mb-12 max-w-2xl mx-auto">
-          Join thousands of satisfied users who have found balance between their digital and physical lives
+          Join thousands of young men who've overcome phone addiction and transformed their fitness habits
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
