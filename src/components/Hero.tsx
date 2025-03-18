@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Timer, Dumbbell } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -7,35 +8,35 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-            Responsible Banking Made Easier
+            Balance Digital Life With Physical Activity
           </h1>
           <p className="text-lg text-white/80 max-w-xl">
-            Financial services, including P2P payments, balance check and top-ups - are now available from any mobile app, including all messaging ones.
+            Our app helps you manage screen time while encouraging gym visits. Set limits on digital usage, then scan gym equipment to unlock extended screen time.
           </p>
           <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
             <Download className="w-5 h-5" />
-            Download Application
+            Download FitScreen
           </Button>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">5000+</div>
-              <div className="text-white/60">Active users</div>
+              <div className="text-3xl font-bold text-white">30%</div>
+              <div className="text-white/60">Reduced screen time</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">30.3k</div>
-              <div className="text-white/60">Download</div>
+              <div className="text-3xl font-bold text-white">65%</div>
+              <div className="text-white/60">More gym visits</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">1200+</div>
-              <div className="text-white/60">Reviews</div>
+              <div className="text-3xl font-bold text-white">4.8</div>
+              <div className="text-white/60">App Rating</div>
             </div>
           </div>
         </div>
         <div className="relative">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1288&auto=format&fit=crop"
-              alt="Banking App"
+              src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1200&auto=format&fit=crop"
+              alt="Person checking FitScreen app on smartwatch"
               className="w-full h-auto"
             />
           </div>

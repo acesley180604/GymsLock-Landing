@@ -1,22 +1,23 @@
+
 import { Card } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "The best banking experience I've ever had. Simple, fast, and secure.",
+      quote: "FitScreen helped me reduce my screen time by 40% and I've been going to the gym 3 times a week now!",
       author: "Sarah Johnson",
-      role: "Business Owner"
+      role: "Marketing Professional"
     },
     {
-      quote: "This app has completely transformed how I manage my finances.",
+      quote: "The QR scanner feature makes it fun to track my gym sessions. It's like a game that rewards me with more screen time.",
       author: "Michael Chen",
       role: "Software Engineer"
     },
     {
-      quote: "Incredible user experience. Everything just works seamlessly.",
+      quote: "As a parent, I love how this app encourages my teenagers to balance screen time with physical activity.",
       author: "Emma Davis",
-      role: "Financial Analyst"
+      role: "Parent of two"
     }
   ];
 
@@ -28,7 +29,7 @@ const Testimonials = () => {
           What Our Users Say
         </h2>
         <p className="text-xl text-white/60 text-center mb-12 max-w-2xl mx-auto">
-          Join thousands of satisfied users who have transformed their banking experience
+          Join thousands of satisfied users who have found balance between their digital and physical lives
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

@@ -1,22 +1,23 @@
+
 import { Card } from "@/components/ui/card";
-import { Wallet, Shield, CreditCard } from "lucide-react";
+import { Timer, Dumbbell, Scan, Bell, Smartphone } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: <Wallet className="w-6 h-6 text-white" />,
-      title: "Mobile Banking",
-      description: "Manage your finances on the go with our secure mobile banking platform"
+      icon: <Smartphone className="w-6 h-6 text-white" />,
+      title: "Screen Time Limits",
+      description: "Set daily usage limits for apps and overall screen time"
     },
     {
-      icon: <Shield className="w-6 h-6 text-white" />,
-      title: "Secure Transactions",
-      description: "Bank-grade security for all your transactions and personal data"
+      icon: <Scan className="w-6 h-6 text-white" />,
+      title: "Gym Equipment Scanner",
+      description: "Scan QR codes on gym equipment to verify your workout"
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-white" />,
-      title: "Digital Cards",
-      description: "Virtual and physical cards with advanced control features"
+      icon: <Bell className="w-6 h-6 text-white" />,
+      title: "Smart Notifications",
+      description: "Get alerts when approaching limits and gym motivation reminders"
     }
   ];
 
@@ -27,10 +28,10 @@ const Features = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              All the experience in the new application
+              Balance Digital and Physical Wellbeing
             </h2>
             <p className="text-xl text-white/60">
-              Simple transfers, payments for utilities, functional statements, card settings, for which you used to have to go to the branch online-banking
+              Our app helps you manage screen time and promotes physical activity. Set limits on your digital usage, then extend your time by visiting the gym and scanning equipment.
             </p>
           </div>
           <div className="grid gap-6">
