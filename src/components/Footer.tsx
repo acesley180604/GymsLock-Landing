@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-2 sm:col-span-2 md:col-span-1 space-y-4">
             <Link to="/" className="text-xl sm:text-2xl font-bold text-white flex items-center hover:text-white/90 transition-colors">
               <Timer className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              GymLocks
+              FocalFit
             </Link>
             <p className="text-sm sm:text-base text-white/60">
               Balancing digital life with physical activity. Reduce screen time, increase gym engagement.
@@ -62,7 +62,7 @@ const Footer = () => {
         
         <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10">
           <p className="text-center text-sm sm:text-base text-white/60">
-            © 2024 GymLocks. All rights reserved.
+            © 2024 FocalFit. All rights reserved.
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="text-xl sm:text-2xl font-bold text-white flex items-center hover:text-white/90 transition-colors">
           <Timer className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
-          GymLocks
+          FocalFit
         </Link>
 
         {/* Desktop Menu */}
