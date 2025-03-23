@@ -105,38 +105,74 @@ const Hero = () => {
                 {/* iPhone Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-6 bg-[#1a1a1a] rounded-b-xl z-10"></div>
                 
-                {/* Background Image */}
+                {/* Background Image - Changed to show camera taking photo of gym equipment */}
                 <img 
-                  src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop"
-                  alt="Focused young man working out in the gym"
+                  src="https://images.unsplash.com/photo-1637926188904-97fb8d1dcfd1?q=80&w=2532&auto=format&fit=crop"
+                  alt="Person taking a photo of gym equipment"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F3C] via-[#0A1F3C]/50 to-transparent"></div>
                 
-                {/* Lock Icon Overlay */}
-                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center">
-                    <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="11" width="18" height="11" rx="2" />
-                      <path d="M7 11V7a5 5 0 0110 0v4" />
-                    </svg>
+                {/* Camera Interface Overlay */}
+                <div className="absolute inset-0 z-20">
+                  {/* Camera UI */}
+                  <div className="absolute top-14 inset-x-0 flex justify-center">
+                    <div className="bg-black/40 backdrop-blur-md rounded-full px-4 py-1 text-xs text-white font-medium">
+                      PHOTO
+                    </div>
                   </div>
-                </div>
-                
-                {/* Time Display (iPhone Lock Screen) */}
-                <div className="absolute top-20 inset-x-0 text-center">
-                  <div className="text-3xl sm:text-4xl font-light text-white">9:41</div>
-                  <div className="text-sm text-white/80 font-light">Monday, March 18</div>
+                  
+                  {/* Camera Frame */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-28 h-28 sm:w-36 sm:h-36 border-2 border-white/80 rounded-lg flex items-center justify-center">
+                      <div className="absolute inset-0 w-full h-full border-4 border-white/30 rounded-lg"></div>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Equipment Recognition Indicator */}
+                  <div className="absolute top-[60%] left-1/2 -translate-x-1/2 text-center">
+                    <div className="bg-black/40 backdrop-blur-md rounded-lg px-4 py-2 inline-block">
+                      <div className="text-sm sm:text-base font-medium text-white">Equipment Recognized ✓</div>
+                      <div className="text-xs text-green-400 mt-1">Treadmill Detected</div>
+                    </div>
+                  </div>
+                  
+                  {/* Camera Controls */}
+                  <div className="absolute bottom-12 inset-x-0 flex justify-center items-center space-x-6">
+                    <div className="w-5 h-5 bg-white/80 rounded-full p-4 flex items-center justify-center border border-white/40">
+                      <svg className="w-4 h-4 text-black" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 3H15L12 0L9 3Z"></path>
+                        <path d="M9 21H15L12 24L9 21Z"></path>
+                        <path d="M3 9V15L0 12L3 9Z"></path>
+                        <path d="M21 9V15L24 12L21 9Z"></path>
+                      </svg>
+                    </div>
+                    <div className="w-14 h-14 rounded-full border-4 border-white flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M15 6v12a3 3 0 003-3V9a3 3 0 00-3-3z" />
+                        <rect x="6" y="6" width="9" height="12" rx="3" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Bottom Content Overlay */}
                 <div className="absolute bottom-0 inset-x-0 p-3 sm:p-6 bg-gradient-to-t from-[#0A1F3C] to-transparent">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold text-white">Focus Mode Active</h3>
-                      <p className="text-xs sm:text-sm text-white/70">Phone notifications blocked</p>
+                      <h3 className="text-base sm:text-lg font-semibold text-white">Unlock Extra Time</h3>
+                      <p className="text-xs sm:text-sm text-white/70">Photo recognized - unlocking</p>
                     </div>
                     <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-[#00DDEB] to-[#0A1F3C] flex items-center justify-center">
                       <Sparkles className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
@@ -144,9 +180,9 @@ const Hero = () => {
                   </div>
                   {/* Progress Bar */}
                   <div className="w-full h-1 bg-white/10 rounded-full mt-3 sm:mt-4 overflow-hidden">
-                    <div className="w-3/4 h-full bg-gradient-to-r from-[#00DDEB] to-[#0A1F3C]"></div>
+                    <div className="w-[60%] h-full bg-gradient-to-r from-[#00DDEB] to-[#0A1F3C]"></div>
                   </div>
-                  <p className="text-[10px] sm:text-xs text-white/60 mt-1 sm:mt-2">45 min streak - Personal Best!</p>
+                  <p className="text-[10px] sm:text-xs text-white/60 mt-1 sm:mt-2">+30 min will be added to your screen time</p>
                   
                   {/* iPhone Home Indicator */}
                   <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/3 h-1 bg-white/80 rounded-full"></div>
