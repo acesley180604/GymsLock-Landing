@@ -3,38 +3,41 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Download, Timer, Scan, LineChart, Zap, Smartphone } from "lucide-react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
+import { useLanguage } from "@/context/LanguageContext";
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       icon: <Download className="w-8 h-8 text-white" />,
-      title: "Download & Setup",
-      description: "Download GymLocks from your app store and complete a simple setup process. Connect your accounts, set your fitness goals, and customize your screen time preferences."
+      title: t("downloadSetup"),
+      description: t("downloadSetupDesc")
     },
     {
       icon: <Timer className="w-8 h-8 text-white" />,
-      title: "Set Your Limits",
-      description: "Choose daily screen time limits for different apps and overall usage. Our AI assistant will help recommend healthy limits based on your usage patterns and goals."
+      title: t("setLimits"),
+      description: t("setLimitsDesc")
     },
     {
       icon: <Smartphone className="w-8 h-8 text-white" />,
-      title: "Get Notified",
-      description: "Receive smart notifications when you're approaching your limits. GymLocks will gently remind you to take breaks and suggest physical activities."
+      title: t("getNotified"),
+      description: t("getNotifiedDesc")
     },
     {
       icon: <Scan className="w-8 h-8 text-white" />,
-      title: "Visit The Gym",
-      description: "When you visit a participating gym, open GymLocks and scan the QR codes on equipment. Each successful scan verifies your workout and adds bonus screen time to your allowance."
+      title: t("visitGym"),
+      description: t("visitGymDesc")
     },
     {
       icon: <LineChart className="w-8 h-8 text-white" />,
-      title: "Track Progress",
-      description: "Monitor your improvement over time with detailed analytics. See how your screen time has decreased while your gym attendance has increased."
+      title: t("trackProgress"),
+      description: t("trackProgressDesc")
     },
     {
       icon: <Zap className="w-8 h-8 text-white" />,
-      title: "Earn Rewards",
-      description: "Unlock achievements and earn digital rewards as you improve your screen-gym balance. Share your progress with friends for additional motivation."
+      title: t("earnRewards"),
+      description: t("earnRewardsDesc")
     }
   ];
 
@@ -51,10 +54,10 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6">
-              How <span className="gradient-text">GymLocks</span> Works
+              {t("howItWorksTitle")}
             </h1>
             <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              Our simple yet powerful system helps you balance your digital life with physical activity through a rewarding feedback loop.
+              {t("howItWorksSubtitle")}
             </p>
           </div>
           
@@ -91,9 +94,9 @@ const HowItWorks = () => {
           </div>
           
           <div className="mt-24 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Journey?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("readyJourney")}</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto mb-8">
-              Join thousands of users who've transformed their relationship with technology and fitness using GymLocks.
+              {t("transformedUsers")}
             </p>
           </div>
         </div>

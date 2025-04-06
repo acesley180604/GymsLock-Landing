@@ -3,39 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: 240 10% 3.9%;
+  --background: 215 25% 10%;
   --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
+  --card: 215 25% 12%;
   --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
+  --popover: 215 25% 10%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  --secondary: 240 3.7% 15.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 215 25% 15%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 142 71% 45%;
+  --muted: 215 25% 18%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 221.2 83.2% 53.3%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 142 71% 45%;
+  --border: 215 25% 20%;
+  --input: 215 25% 20%;
+  --ring: 221.2 83.2% 53.3%;
 }
 
 body {
-  background: linear-gradient(to bottom right, #0f172a, #1e293b, #111827);
+  background: #0f172a;
   color: white;
   min-height: 100vh;
 }
 
 /* Beautiful glass effect */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(22, 28, 36, 0.4);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Card hover animation */
@@ -50,14 +50,14 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(to right, #10b981, #3b82f6);
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Animated gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(-45deg, #111827, #0f172a, #0e7490, #0d9488);
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0e7490, #0d9488);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 }
@@ -93,7 +93,7 @@ body {
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(45deg, #10b981, #3b82f6, #8b5cf6, #f59e0b);
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
   filter: blur(20px);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -101,16 +101,16 @@ body {
 }
 
 .glow:hover::after {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 /* Modern card design */
 .modern-card {
-  background: rgba(23, 23, 23, 0.8);
-  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 16px;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Spinning background orbs */
@@ -118,7 +118,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.5;
+  opacity: 0.3;
   animation: floating 15s infinite ease-in-out;
 }
 
@@ -137,5 +137,21 @@ body {
   }
   100% {
     transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* QR Code scanning animation */
+@keyframes scan {
+  0% {
+    transform: translate(-50%, -100px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, 100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -100px);
+    opacity: 0.5;
   }
 }

@@ -3,21 +3,24 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Check, Sparkles } from "lucide-react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
+import { useLanguage } from "@/context/LanguageContext";
 
 const PricingPage = () => {
+  const { t } = useLanguage();
+  
   const features = [
-    "Unlimited screen time tracking",
-    "Gym equipment QR code scanning",
-    "Personalized screen time limits",
-    "Smart notifications",
-    "Progress analytics and reports",
-    "Workout suggestions",
-    "Eye health protection",
-    "Focus mode",
-    "App blocking capabilities",
-    "Balance score calculations",
-    "Priority customer support",
-    "Regular feature updates"
+    t("feature1"),
+    t("feature2"),
+    t("feature3"),
+    t("feature4"),
+    t("feature5"),
+    t("feature6"),
+    t("feature7"),
+    t("feature8"),
+    t("feature9"),
+    t("feature10"),
+    t("feature11"),
+    t("feature12")
   ];
 
   return (
@@ -33,10 +36,10 @@ const PricingPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6">
-              Simple, <span className="gradient-text">Transparent</span> Pricing
+              {t("pricingTitle")}
             </h1>
             <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              One affordable plan with everything you need to balance your digital and physical wellbeing.
+              {t("pricingSubtitle")}
             </p>
           </div>
           
@@ -51,13 +54,13 @@ const PricingPage = () => {
               </div>
               
               <div className="flex flex-col items-center text-center relative z-10">
-                <h2 className="text-3xl font-bold text-white mb-2 group-hover:gradient-text transition-all duration-300">Premium Plan</h2>
+                <h2 className="text-3xl font-bold text-white mb-2 group-hover:gradient-text transition-all duration-300">{t("premiumPlan")}</h2>
                 <div className="flex items-baseline mb-6">
                   <span className="text-6xl font-bold gradient-text">$29</span>
-                  <span className="text-xl text-white/60 ml-2">/ year</span>
+                  <span className="text-xl text-white/60 ml-2">{t("perYear")}</span>
                 </div>
                 <p className="text-white/60 mb-8 group-hover:text-white/80 transition-colors duration-300">
-                  All the tools you need to transform your habits and balance your digital and physical wellbeing.
+                  {t("planDescription")}
                 </p>
                 
                 <div className="w-full border-t border-accent/10 pt-6 mb-8"></div>
@@ -77,36 +80,36 @@ const PricingPage = () => {
             
             <div className="mt-12 text-center text-white/60">
               <p className="group hover:text-white/80 transition-colors duration-300 cursor-default">
-                All plans come with a 14-day free trial. No credit card required.
+                {t("freeTrial")}
               </p>
               <p className="mt-2 group hover:text-white/80 transition-colors duration-300 cursor-default">
-                100% satisfaction guarantee or your money back within 30 days.
+                {t("moneyBack")}
               </p>
             </div>
           </div>
           
           <div className="mt-20 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("faq")}</h2>
             <div className="max-w-3xl mx-auto mt-8 grid gap-6">
               <Card className="p-6 glass-effect group hover-lift">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">Can I cancel my subscription?</h3>
-                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period.</p>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">{t("faqQuestion1")}</h3>
+                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">{t("faqAnswer1")}</p>
               </Card>
               <Card className="p-6 glass-effect group hover-lift">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">Are there any hidden fees?</h3>
-                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">No, the $29 per year is all you pay. There are no additional fees or in-app purchases required to access all features.</p>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">{t("faqQuestion2")}</h3>
+                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">{t("faqAnswer2")}</p>
               </Card>
               <Card className="p-6 glass-effect group hover-lift">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">Which gyms are compatible with the QR scanning?</h3>
-                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">We're expanding our network weekly. Currently, we support most major gym chains and thousands of independent fitness centers. Check our gym finder in the app.</p>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">{t("faqQuestion3")}</h3>
+                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">{t("faqAnswer3")}</p>
               </Card>
               <Card className="p-6 glass-effect group hover-lift">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">Can I use GymLocks on multiple devices?</h3>
-                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">Yes, your subscription allows you to use GymLocks on up to 3 devices simultaneously with the same account.</p>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:gradient-text transition-all duration-300">{t("faqQuestion4")}</h3>
+                <p className="text-white/60 group-hover:text-white/80 transition-colors duration-300">{t("faqAnswer4")}</p>
               </Card>
             </div>
           </div>

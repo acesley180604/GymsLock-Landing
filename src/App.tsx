@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import FeaturesPage from "./pages/Features";
 import HowItWorks from "./pages/HowItWorks";
-import TestimonialsPage from "./pages/Testimonials";
 import PricingPage from "./pages/Pricing";
 
 const queryClient = new QueryClient();
@@ -22,7 +21,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
         </Routes>
       </BrowserRouter>

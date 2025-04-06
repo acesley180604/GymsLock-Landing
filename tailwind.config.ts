@@ -69,7 +69,27 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
       },
+      animationDelay: {
+        200: "200ms",
+        400: "400ms",
+        600: "600ms",
+        800: "800ms",
+        1000: "1000ms",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities, theme }) {
+      const animationDelays = theme('animationDelay');
+      const utilities = Object.entries(animationDelays).reduce(
+        (acc, [key, value]) => ({
+          ...acc,
+          [`.animation-delay-${key}`]: { animationDelay: value },
+        }),
+        {}
+      );
+      addUtilities(utilities);
+    },
+  ],
 } satisfies Config;
