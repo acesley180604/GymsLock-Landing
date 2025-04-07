@@ -1,7 +1,7 @@
 const translations = {
   // Navigation
   "home": "首頁",
-  "features": "功能特色",
+  "features": "強大功能",
   "howItWorks": "怎麼用",
   "pricing": "價格方案",
   "language": "語言",
@@ -68,14 +68,15 @@ const translations = {
   "jun": "6月",
   
   // Feature Section
-  "featuresTitle": "超強功能",
-  "featuresSubtitle": "GymsLock 結合前沿科技和行為科學，幫你平衡數位生活和身體健康。",
-  "smartScreenTime": "智慧螢幕時間控制",
-  "smartScreenTimeDesc": "為各種 App 和整體使用設定每日限制。我們的演算法會根據你的使用習慣提供更好的建議。",
-  "gymScanner": "健身器材掃描",
-  "gymScannerDesc": "掃描健身器材上的 QR 碼來記錄你的鍛鍊。每次掃描都能延長你的螢幕使用時間。",
-  "smartNotifications": "智慧提醒",
-  "smartNotificationsDesc": "在接近限制時獲得提醒，並在最佳時間收到健身激勵通知。",
+  "featuresTitle": "強大功能",
+  "featuresSubtitle": "用我們的尖端功能改變你的數位習慣，提升你的生產力。",
+  "featuresDescription": "您需要的一切，保持專注和高效",
+  "smartScreenTime": "智能螢幕時間管理",
+  "smartScreenTimeDesc": "透過 AI 驅動的螢幕時間追蹤和個人化限制，掌控你的數位生活，實現你的目標。",
+  "gymScanner": "健身房掃描器",
+  "gymScannerDesc": "每次健身都是一次勝利，即時 QR 驗證和獎勵進度追蹤讓你保持動力。",
+  "smartNotifications": "智能通知",
+  "smartNotificationsDesc": "透過智能提醒保持正軌，幫助你維持專注並達成健身目標。",
   "progressTracking": "進度追蹤",
   "progressTrackingDesc": "透過詳細數據直觀地看到你的螢幕時間減少和健身頻率增加的情況。",
   "workoutSuggestions": "健身建議",
@@ -90,6 +91,11 @@ const translations = {
   "focusModeDesc": "啟用專注模式限制分心的 App，同時保留必要的通訊功能。",
   "rewardSystem": "獎勵機制",
   "rewardSystemDesc": "隨著數位-健身平衡的改善，獲得數位獎勵和解鎖成就。",
+  
+  // Feature Benefits
+  "featureBenefit1": "AI 驅動的追蹤和分析",
+  "featureBenefit2": "個人化的建議和洞察",
+  "featureBenefit3": "即時進度監控",
   
   // Consolidated Features
   "smartTimeManagement": "智慧螢幕時間管理",

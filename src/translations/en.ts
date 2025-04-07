@@ -69,13 +69,14 @@ const translations = {
   
   // Feature Section
   "featuresTitle": "Powerful Features",
-  "featuresSubtitle": "GymsLock combines cutting-edge technology with behavioral science to help you balance your digital and physical wellbeing.",
-  "smartScreenTime": "Smart Screen Time Limits",
-  "smartScreenTimeDesc": "Set personalized daily usage limits for apps and overall screen time. Our algorithm adapts to your usage patterns for better recommendations.",
-  "gymScanner": "Gym Equipment Scanner",
-  "gymScannerDesc": "Scan QR codes on gym equipment to verify your workout sessions. Each scan extends your screen time allowance as a reward.",
+  "featuresSubtitle": "Transform your digital habits and boost your productivity with our cutting-edge features.",
+  "featuresDescription": "Everything you need to stay focused and productive",
+  "smartScreenTime": "Smart Screen Time Management",
+  "smartScreenTimeDesc": "Take control of your digital life with AI-powered screen time tracking and personalized limits that adapt to your goals.",
+  "gymScanner": "Gym Scanner",
+  "gymScannerDesc": "Turn every gym visit into a victory with instant QR verification and rewarding progress tracking that keeps you motivated.",
   "smartNotifications": "Smart Notifications",
-  "smartNotificationsDesc": "Get customized alerts when approaching limits and receive gym motivation reminders at optimal times based on your schedule.",
+  "smartNotificationsDesc": "Stay on track with intelligent reminders that help you maintain focus and achieve your fitness goals.",
   "progressTracking": "Progress Tracking",
   "progressTrackingDesc": "Visualize your screen time reduction and gym attendance improvements with detailed analytics and insights.",
   "workoutSuggestions": "Workout Suggestions",
@@ -90,6 +91,11 @@ const translations = {
   "focusModeDesc": "Enable focus sessions that restrict access to distracting apps while allowing essential communications.",
   "rewardSystem": "Reward System",
   "rewardSystemDesc": "Earn digital rewards and unlock achievements as you improve your screen-gym balance.",
+  
+  // Feature Benefits
+  "featureBenefit1": "AI-powered tracking and analysis",
+  "featureBenefit2": "Personalized recommendations and insights",
+  "featureBenefit3": "Real-time progress monitoring",
   
   // Consolidated Features
   "smartTimeManagement": "Smart Screen Time Management",

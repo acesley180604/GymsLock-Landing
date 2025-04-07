@@ -90,7 +90,7 @@ const Hero = () => {
             <ContactForm />
           </motion.div>
         </div>
-        
+
         {/* iPhone and stats - two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 mb-32">
           {/* Left column - iPhone mockup with Arc styling */}
@@ -114,13 +114,13 @@ const Hero = () => {
                 <p className="text-xs text-slate-500 text-center px-4 absolute bottom-8">
                   iPhone 16 GIF placeholder (320×690px)<br/>GIF will be added here later
                 </p>
-              </div>
-              
-              {/* iPhone Notch */}
+          </div>
+
+                {/* iPhone Notch */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-6 bg-black rounded-b-xl z-10"></div>
-              
-              {/* iPhone Home Indicator */}
-              <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/3 h-1 bg-white/80 rounded-full"></div>
+                    
+                    {/* iPhone Home Indicator */}
+                    <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/3 h-1 bg-white/80 rounded-full"></div>
             </div>
             
             {/* Device Highlight Effect */}
@@ -137,9 +137,9 @@ const Hero = () => {
                 <svg className="w-12 h-12 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="3" y="11" width="18" height="11" rx="2" />
                   <path d="M7 11V7a5 5 0 0110 0v4" />
-                </svg>
+                        </svg>
               </motion.div>
-            </div>
+                      </div>
           </motion.div>
           
           {/* Right column - Stats with icons */}
@@ -157,11 +157,11 @@ const Hero = () => {
             >
               <div className="rounded-full p-3 bg-blue-500/10 text-blue-400">
                 <Timer className="w-6 h-6" />
-              </div>
-              <div>
+                </div>
+                    <div>
                 <div className="text-xl font-bold text-white mb-1">80% {t("reducedScreenTime")}</div>
                 <p className="text-slate-400">{t("screenTimeDescription")}</p>
-              </div>
+                    </div>
             </motion.div>
             
             <motion.div 
@@ -174,7 +174,7 @@ const Hero = () => {
               <div>
                 <div className="text-xl font-bold text-white mb-1">85% {t("moreGymVisits")}</div>
                 <p className="text-slate-400">{t("gymVisitsDescription")}</p>
-              </div>
+            </div>
             </motion.div>
             
             <motion.div 
@@ -183,11 +183,11 @@ const Hero = () => {
             >
               <div className="rounded-full p-3 bg-purple-500/10 text-purple-400">
                 <Sparkles className="w-6 h-6" />
-              </div>
+            </div>
               <div>
                 <div className="text-xl font-bold text-white mb-1">4.8 {t("appRating")}</div>
                 <p className="text-slate-400">{t("appRatingDescription")}</p>
-              </div>
+          </div>
             </motion.div>
           </motion.div>
         </div>
