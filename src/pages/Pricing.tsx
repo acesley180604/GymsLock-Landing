@@ -14,7 +14,7 @@ const features = [
 
 // Monthly plan metrics
 const monthlyPrice = 12.9;
-const monthlyEarlyAccessPrice = 12.9;
+const monthlyEarlyAccessPrice = 3.49;
 const monthlyTotalSlots = 100;
 const monthlyFilledSlots = 85;
 const monthlyRemainingSlots = monthlyTotalSlots - monthlyFilledSlots;
