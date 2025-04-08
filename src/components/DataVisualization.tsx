@@ -353,7 +353,10 @@ const DataVisualization = () => {
         >
           <h3 className="text-xl font-bold text-white mb-4">{t("readyJourney")}</h3>
           <p className="text-slate-400 mb-6">{t("transformedUsers")}</p>
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-sm transition-colors">
+          <button 
+            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-sm transition-colors"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             {t("getStarted")}
           </button>
         </motion.div>

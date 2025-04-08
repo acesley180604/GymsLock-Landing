@@ -7,8 +7,26 @@ const Footer = () => {
   const { t } = useLanguage();
   
   return (
-    <footer className="py-12 sm:py-20 px-4 sm:px-6 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent/5 backdrop-blur-3xl"></div>
+    <footer className="py-12 sm:py-20 px-4 sm:px-6 bg-slate-950 relative overflow-hidden">
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="smallGridFooter" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,1)" strokeWidth="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#smallGridFooter)" />
+        </svg>
+      </div>
+      
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-slate-950/90 pointer-events-none"></div>
+      
+      {/* Accent color dots - subtle positioning */}
+      <div className="absolute top-20 right-[20%] w-72 h-72 rounded-full bg-blue-600/5 blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-40 left-[15%] w-80 h-80 rounded-full bg-purple-600/5 blur-[100px] pointer-events-none"></div>
+      
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
           <div className="col-span-2 sm:col-span-2 md:col-span-1 space-y-4">
@@ -20,11 +38,11 @@ const Footer = () => {
               Balancing digital life with physical activity. Reduce screen time, increase gym engagement.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
-              <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-slate-800/80">
                 <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
               <a href="https://www.tiktok.com/@gymslock" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-white/10">
+                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-slate-800/80">
                   <svg 
                     viewBox="0 0 24 24"
                     className="w-4 h-4 sm:w-5 sm:h-5"
@@ -36,12 +54,12 @@ const Footer = () => {
                 </Button>
               </a>
               <a href="https://www.instagram.com/gymslock/" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-white/10">
+                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-slate-800/80">
                   <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
               </a>
               <a href="https://www.threads.net/@gymslock" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-white/10">
+                <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10 hover:bg-slate-800/80">
                   <svg
                     viewBox="0 0 24 24"
                     className="w-4 h-4 sm:w-5 sm:h-5"
@@ -86,7 +104,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-700/50">
           <p className="text-center text-sm sm:text-base text-white/60">
             {t("copyright")}
           </p>

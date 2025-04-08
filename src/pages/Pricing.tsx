@@ -1,56 +1,53 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Check, Sparkles, Percent } from "lucide-react";
+import { Check, Sparkles, Percent, Star, Zap, Shield } from "lucide-react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 
+const features = [
+  "Smart Screen Time Management",
+  "Instant Equipment Recognition",
+  "AI-Powered Progress Tracking"
+];
+
+// Monthly plan metrics
+const monthlyPrice = 12.9;
+const monthlyEarlyAccessPrice = 12.9;
+const monthlyTotalSlots = 100;
+const monthlyFilledSlots = 85;
+const monthlyRemainingSlots = monthlyTotalSlots - monthlyFilledSlots;
+const monthlyProgressPercentage = (monthlyFilledSlots / monthlyTotalSlots) * 100;
+const monthlyPlanLink = "https://buy.stripe.com/test_5kA9BuaoE6QD7kc5kn";
+
+// Yearly plan metrics
+const yearlyPrice = 129;
+const yearlyEarlyAccessPrice = 34.9;
+const yearlyTotalSlots = 100;
+const yearlyFilledSlots = 92;
+const yearlyRemainingSlots = yearlyTotalSlots - yearlyFilledSlots;
+const yearlyProgressPercentage = (yearlyFilledSlots / yearlyTotalSlots) * 100;
+const yearlyPlanLink = "https://buy.stripe.com/test_5kA9BuaoE6QD7kc5kn";
+
+const handleRedirectToPayment = (link: string) => {
+  window.location.href = link;
+};
+
 const PricingPage = () => {
   const { t } = useLanguage();
   
-  const features = [
-    t("feature1"),
-    t("feature2"),
-    t("feature3"),
-    t("feature4"),
-    t("feature5"),
-    t("feature6"),
-    t("feature7"),
-    t("feature8"),
-    t("feature9"),
-    t("feature10"),
-    t("feature11"),
-    t("feature12")
-  ];
-
-  // Monthly plan metrics
-  const monthlyTotalSlots = 50;
-  const monthlyFilledSlots = 34;
-  const monthlyRemainingSlots = monthlyTotalSlots - monthlyFilledSlots;
-  const monthlyProgressPercentage = (monthlyFilledSlots / monthlyTotalSlots) * 100;
-  
-  // Yearly plan metrics
-  const yearlyTotalSlots = 100;
-  const yearlyFilledSlots = 57;
-  const yearlyRemainingSlots = yearlyTotalSlots - yearlyFilledSlots;
-  const yearlyProgressPercentage = (yearlyFilledSlots / yearlyTotalSlots) * 100;
-  
   // Monthly plan pricing
-  const monthlyOriginalPrice = 12.9;
-  const monthlyEarlyAccessPrice = 3.5;
-  const monthlyDiscountPercentage = Math.round(((monthlyOriginalPrice - monthlyEarlyAccessPrice) / monthlyOriginalPrice) * 100);
+  const monthlyDiscountPercentage = Math.round(((monthlyPrice - monthlyEarlyAccessPrice) / monthlyPrice) * 100);
   
   // Yearly plan pricing
-  const yearlyOriginalPrice = 129;
-  const yearlyEarlyAccessPrice = 34.9;
-  const yearlyDiscountPercentage = Math.round(((yearlyOriginalPrice - yearlyEarlyAccessPrice) / yearlyOriginalPrice) * 100);
+  const yearlyDiscountPercentage = Math.round(((yearlyPrice - yearlyEarlyAccessPrice) / yearlyPrice) * 100);
 
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       <EarlyAccessPopup />
       
-      {/* Modern background design inspired by Arc */}
+      {/* Modern background design */}
       <div className="absolute inset-0 z-0">
         {/* Primary background with subtle gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
@@ -67,13 +64,13 @@ const PricingPage = () => {
           </svg>
         </div>
         
-        {/* Accent color dots - subtle positioning */}
+        {/* Accent color dots */}
         <div className="absolute top-20 right-[20%] w-72 h-72 rounded-full bg-blue-600/10 blur-[120px]"></div>
         <div className="absolute bottom-40 left-[15%] w-80 h-80 rounded-full bg-purple-600/10 blur-[100px]"></div>
         <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-indigo-600/10 blur-[80px]"></div>
       </div>
 
-      {/* Subtle animated glow effects */}
+      {/* Animated glow effects */}
       <motion.div 
         initial={{ opacity: 0.2 }}
         animate={{ opacity: [0.2, 0.3, 0.2] }}
@@ -112,180 +109,128 @@ const PricingPage = () => {
               </motion.p>
             </div>
             
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Monthly Plan */}
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+              {/* Monthly Plan Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
               >
-                <Card className="p-8 bg-slate-800/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 relative overflow-hidden group border border-slate-700/50 h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  {/* Sparkle decorations */}
-                  <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-br-full"></div>
-                  <div className="absolute top-4 left-4">
-                    <Sparkles className="w-6 h-6 text-yellow-400/80" />
+                <Card className="relative p-8 bg-slate-900/50 backdrop-blur-sm border-slate-800 hover:border-slate-700 transition-all duration-300">
+                  <div className="absolute -top-3 left-8 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    Monthly Plan
                   </div>
-                  
-                  {/* Early access badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 border border-blue-400/20">
-                      <Percent className="w-3 h-3 mr-1" />
-                      {monthlyDiscountPercentage}% OFF
-                    </span>
+                  <div className="mt-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-white">${monthlyEarlyAccessPrice}</span>
+                      <span className="text-slate-400">/month</span>
+                    </div>
+                    <div className="mt-2">
+                      <span className="text-slate-400 line-through">${monthlyPrice}</span>
+                      <span className="ml-2 text-green-400">Save {monthlyDiscountPercentage}%</span>
+                    </div>
                   </div>
-                  
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-all duration-300">Monthly Plan</h2>
-                    
-                    {/* Pricing display */}
-                    <div className="flex flex-col items-center mb-6">
-                      <div className="flex items-baseline">
-                        <span className="text-6xl font-bold text-blue-400">${monthlyEarlyAccessPrice}</span>
-                        <span className="text-xl text-slate-400 ml-2">{t("perMonth")}</span>
-                      </div>
-                      <div className="flex items-center mt-2">
-                        <span className="text-lg text-slate-500 line-through">${monthlyOriginalPrice}</span>
-                        <span className="text-sm text-green-400 ml-2">Early Access Price</span>
-                      </div>
+
+                  <div className="mt-8">
+                    <div className="flex justify-between text-sm mb-2">
+                      <span className="text-slate-400">Early Access Progress</span>
+                      <span className="text-slate-400">{monthlyFilledSlots}/{monthlyTotalSlots} slots</span>
                     </div>
-                    
-                    {/* Early access progress bar */}
-                    <div className="w-full mb-6">
-                      <div className="flex justify-between text-sm text-slate-400 mb-2">
-                        <span>Early Access Slots</span>
-                        <span>{monthlyFilledSlots}/{monthlyTotalSlots} filled</span>
-                      </div>
-                      <div className="w-full h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                        <motion.div 
-                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${monthlyProgressPercentage}%` }}
-                          transition={{ duration: 1, delay: 0.5 }}
-                        ></motion.div>
-                      </div>
-                      <p className="text-xs text-slate-500 mt-1 text-right">
-                        {monthlyRemainingSlots} slots remaining
-                      </p>
+                    <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-blue-500 rounded-full transition-all duration-500"
+                        style={{ width: `${monthlyProgressPercentage}%` }}
+                      />
                     </div>
-                    
-                    <p className="text-slate-400 mb-8 group-hover:text-slate-300 transition-colors duration-300">
-                      {t("planDescription")}
+                    <p className="text-slate-400 text-sm mt-2">
+                      Only {monthlyRemainingSlots} slots remaining!
                     </p>
-                    
-                    <div className="w-full border-t border-slate-700/50 pt-6 mb-8"></div>
-                    
-                    <div className="text-left w-full space-y-4 mb-8">
-                      {features.map((feature, index) => (
-                        <motion.div 
-                          key={index} 
-                          className="flex items-center group/item"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                        >
-                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300 border border-blue-400/20">
-                            <Check className="w-4 h-4 text-blue-400" />
-                          </div>
-                          <span className="text-slate-300 group-hover/item:text-white transition-colors duration-300">{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                    
-                    {/* CTA Button */}
-                    <button className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/20">
-                      Get Early Access
-                    </button>
                   </div>
+
+                  <div className="mt-8 space-y-4">
+                    {features.map((feature, index) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="flex items-center gap-3"
+                      >
+                        <Check className="h-5 w-5 text-green-400" />
+                        <span className="text-slate-300">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => handleRedirectToPayment(monthlyPlanLink)}
+                    className="mt-8 w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-medium transition-colors duration-300"
+                  >
+                    Get Early Access
+                  </button>
                 </Card>
               </motion.div>
               
-              {/* Yearly Plan */}
+              {/* Yearly Plan Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="w-full"
               >
-                <Card className="p-8 bg-slate-800/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 relative overflow-hidden group border border-slate-700/50 h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  {/* Sparkle decorations */}
-                  <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-br-full"></div>
-                  <div className="absolute top-4 left-4">
-                    <Sparkles className="w-6 h-6 text-yellow-400/80" />
+                <Card className="relative p-8 bg-slate-900/50 backdrop-blur-sm border-slate-800 hover:border-slate-700 transition-all duration-300">
+                  <div className="absolute -top-3 left-8 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    Yearly Plan
                   </div>
-                  
-                  {/* Early access badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 border border-blue-400/20">
-                      <Percent className="w-3 h-3 mr-1" />
-                      {yearlyDiscountPercentage}% OFF
-                    </span>
+                  <div className="mt-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-white">${yearlyEarlyAccessPrice}</span>
+                      <span className="text-slate-400">/year</span>
+                    </div>
+                    <div className="mt-2">
+                      <span className="text-slate-400 line-through">${yearlyPrice}</span>
+                      <span className="ml-2 text-green-400">Save {yearlyDiscountPercentage}%</span>
+                    </div>
                   </div>
-                  
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-all duration-300">{t("premiumPlan")}</h2>
-                    
-                    {/* Pricing display */}
-                    <div className="flex flex-col items-center mb-6">
-                      <div className="flex items-baseline">
-                        <span className="text-6xl font-bold text-blue-400">${yearlyEarlyAccessPrice}</span>
-                        <span className="text-xl text-slate-400 ml-2">{t("perYear")}</span>
-                      </div>
-                      <div className="flex items-center mt-2">
-                        <span className="text-lg text-slate-500 line-through">${yearlyOriginalPrice}</span>
-                        <span className="text-sm text-green-400 ml-2">Early Access Price</span>
-                      </div>
+
+                  <div className="mt-8">
+                    <div className="flex justify-between text-sm mb-2">
+                      <span className="text-slate-400">Early Access Progress</span>
+                      <span className="text-slate-400">{yearlyFilledSlots}/{yearlyTotalSlots} slots</span>
                     </div>
-                    
-                    {/* Early access progress bar */}
-                    <div className="w-full mb-6">
-                      <div className="flex justify-between text-sm text-slate-400 mb-2">
-                        <span>Early Access Slots</span>
-                        <span>{yearlyFilledSlots}/{yearlyTotalSlots} filled</span>
-                      </div>
-                      <div className="w-full h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                        <motion.div 
-                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${yearlyProgressPercentage}%` }}
-                          transition={{ duration: 1, delay: 0.5 }}
-                        ></motion.div>
-                      </div>
-                      <p className="text-xs text-slate-500 mt-1 text-right">
-                        {yearlyRemainingSlots} slots remaining
-                      </p>
+                    <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-purple-500 rounded-full transition-all duration-500"
+                        style={{ width: `${yearlyProgressPercentage}%` }}
+                      />
                     </div>
-                    
-                    <p className="text-slate-400 mb-8 group-hover:text-slate-300 transition-colors duration-300">
-                      {t("planDescription")}
+                    <p className="text-slate-400 text-sm mt-2">
+                      Only {yearlyRemainingSlots} slots remaining!
                     </p>
-                    
-                    <div className="w-full border-t border-slate-700/50 pt-6 mb-8"></div>
-                    
-                    <div className="text-left w-full space-y-4 mb-8">
-                      {features.map((feature, index) => (
-                        <motion.div 
-                          key={index} 
-                          className="flex items-center group/item"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                        >
-                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300 border border-blue-400/20">
-                            <Check className="w-4 h-4 text-blue-400" />
-                          </div>
-                          <span className="text-slate-300 group-hover/item:text-white transition-colors duration-300">{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                    
-                    {/* CTA Button */}
-                    <button className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/20">
-                      Get Early Access
-                    </button>
                   </div>
+
+                  <div className="mt-8 space-y-4">
+                    {features.map((feature, index) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="flex items-center gap-3"
+                      >
+                        <Check className="h-5 w-5 text-green-400" />
+                        <span className="text-slate-300">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => handleRedirectToPayment(yearlyPlanLink)}
+                    className="mt-8 w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg font-medium transition-colors duration-300"
+                  >
+                    Get Early Access
+                  </button>
                 </Card>
               </motion.div>
             </div>

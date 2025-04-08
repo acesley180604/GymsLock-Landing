@@ -69,8 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto tracking-tight"
           >
-            <span className="block">GymsLock is the new way</span>
-            <span className="block">to balance digital life.</span>
+            <span className="block">{t("heroTitle")}</span>
           </motion.h1>
           
           <motion.p 
@@ -79,7 +78,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10"
           >
-            Beautifully designed app that helps you manage screen time by rewarding gym visits with bonus digital time. Create a healthier relationship with technology.
+            {t("heroSubtitle")}
           </motion.p>
           
           <motion.div
