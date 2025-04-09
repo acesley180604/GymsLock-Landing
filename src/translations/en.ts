@@ -7,7 +7,7 @@ const translations = {
   "language": "Language",
   
   // Hero Section
-  "heroTitle": "Balance Your Digital Life With Physical Activity",
+  "heroTitle": "28 days to help you detox mobile app with gym visits",
   "heroSubtitle": "GymsLock helps you manage screen time by rewarding gym visits with bonus digital time. Simply take a photo of gym equipment to unlock more screen time and build a healthier relationship with technology.",
   "getStarted": "Get Started",
   "learnMore": "Learn More",
