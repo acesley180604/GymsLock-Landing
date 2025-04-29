@@ -28,7 +28,7 @@ const yearlyTotalSlots = 100;
 const yearlyFilledSlots = 92;
 const yearlyRemainingSlots = yearlyTotalSlots - yearlyFilledSlots;
 const yearlyProgressPercentage = (yearlyFilledSlots / yearlyTotalSlots) * 100;
-const yearlyPlanLink = "https://buy.stripe.com/test_28o4ha0O4grd5c47sx";
+const yearlyPlanLink = "https://buy.stripe.com/test_5kA9BuaoE6QD7kc5kn";
 
 const handleRedirectToPayment = (link: string) => {
   window.location.href = link;
