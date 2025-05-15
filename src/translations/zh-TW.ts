@@ -7,8 +7,8 @@ const translations = {
   "language": "語言",
   
   // Hero Section
-  "heroTitle": "平衡你的數位生活與運動習慣",
-  "heroSubtitle": "GymsLock 幫你管理螢幕時間，只需拍攝健身器材照片就能獲得額外使用時間。建立更健康的科技使用習慣！",
+  "heroTitle": "擺脫手機成癮，用汗水解鎖你的時間！",
+  "heroSubtitle": "GymsLock - 革命性的螢幕時間管理方法，激勵你走進健身房，贏回你的生活。",
   "getStarted": "馬上開始",
   "learnMore": "了解更多",
   "reducedScreenTime": "減少螢幕時間",
@@ -106,15 +106,13 @@ const translations = {
   "progressAnalyticsDesc": "查看您螢幕時間減少和健身頻率增加的詳細數據。我們的平衡評分系統計算您的數位-健身平衡狀況，並在適當時機發送智慧提醒，幫助您保持健康的生活方式。",
   
   // How It Works
-  "howItWorksTitle": "GymsLock 如何運作",
-  "step1Title": "設定螢幕時間限制",
-  "step1Desc": "選擇你的每日螢幕時間配額並設定數位健康目標。",
-  "step2Title": "前往健身房",
-  "step2Desc": "到任何健身房使用你喜歡的器材。",
-  "step3Title": "拍攝器材照片",
-  "step3Desc": "只需拍攝你正在使用的健身器材照片，我們的 AI 會立即識別。",
-  "step4Title": "獲得獎勵時間",
-  "step4Desc": "一旦驗證成功，額外的螢幕時間會自動加入你的每日配額。",
+  "howItWorksTitle": "GymsLock 如何運作？",
+  "howItWorksStep1Title": "設定您的每日螢幕時間限制。",
+  "howItWorksStep1Desc": "設定您的專注目標，並決定您希望透過運動贏取多少螢幕時間。",
+  "howItWorksStep2Title": "前往健身房並拍照。",
+  "howItWorksStep2Desc": "在健身房使用受認可的器材自拍，以驗證您的鍛鍊。",
+  "howItWorksStep3Title": "上傳並解鎖。",
+  "howItWorksStep3Desc": "透過 App 即時上傳您的健身房照片，即可看到額外的螢幕時間加入您的每日配額。",
   "readyJourney": "準備好開始你的旅程了嗎？",
   "transformedUsers": "加入數千名已經通過 GymsLock 改變了他們與科技和健身關係的用戶。",
   
@@ -180,6 +178,15 @@ const translations = {
   "termsOfService": "服務條款",
   "contactUs": "聯絡我們",
   "copyright": "© 2024 GymsLock。保留所有權利。",
+
+  // User Benefits Section
+  "userBenefitsTitle": "使用 GymsLock 您將獲得什麼",
+  "benefit1Title": "不錯過重要時刻",
+  "benefit1Desc": "減少無效的螢幕時間，讓您有更多精力投入現實生活。",
+  "benefit2Title": "戰勝健身拖延症",
+  "benefit2Desc": "清晰的解鎖機制為您提供額外的健身動力，使運動不再是苦差事。",
+  "benefit3Title": "重拾專注力與生產力",
+  "benefit3Desc": "當手機不再是干擾時，您可以更專注於工作、學習或与家人共度時光。",
 };
 
 export default translations; 

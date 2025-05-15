@@ -7,8 +7,8 @@ const translations = {
   "language": "Language",
   
   // Hero Section
-  "heroTitle": "Balance Your Digital Life With Physical Activity",
-  "heroSubtitle": "GymsLock helps you manage screen time by rewarding gym visits with bonus digital time. Simply take a photo of gym equipment to unlock more screen time and build a healthier relationship with technology.",
+  "heroTitle": "Break Free from Phone Addiction, Unlock Your Time with Sweat!",
+  "heroSubtitle": "GymsLock - The revolutionary screen time management method that motivates you to hit the gym and win back your life.",
   "getStarted": "Get Started",
   "learnMore": "Learn More",
   "reducedScreenTime": "Reduced screen time",
@@ -106,20 +106,20 @@ const translations = {
   "progressAnalyticsDesc": "View detailed data on your reduced screen time and increased gym frequency. Our balance score system calculates your digital-fitness balance and sends smart reminders at the right time to help you maintain a healthy lifestyle.",
   
   // How It Works
-  "howItWorksTitle": "How GymsLock Works",
+  "howItWorksTitle": "How Does GymsLock Work?",
   "howItWorksSubtitle": "Our simple yet powerful system helps you balance your digital life with physical activity through a rewarding feedback loop.",
   "downloadSetup": "Download & Setup",
   "downloadSetupDesc": "Download GymsLock from your app store and complete a simple setup process. Connect your accounts, set your fitness goals, and customize your screen time preferences.",
-  "setLimits": "Set Your Limits",
-  "setLimitsDesc": "Choose daily screen time limits for different apps and overall usage. Our AI assistant will help recommend healthy limits based on your usage patterns and goals.",
+  "howItWorksStep1Title": "Set your daily screen time limit.",
+  "howItWorksStep1Desc": "Define your focus goals and decide how much screen time you want to earn through exercise.",
   "getNotified": "Get Notified",
-  "getNotifiedDesc": "Receive smart notifications when you're approaching your limits. GymsLock will gently remind you to take breaks and suggest physical activities.",
-  "visitGym": "Visit The Gym",
-  "visitGymDesc": "When you visit a participating gym, open GymsLock and scan the QR codes on equipment. Each successful scan verifies your workout and adds bonus screen time to your allowance.",
+  "getNotifiedDesc": "Receive smart notifications when you\'re approaching your limits. GymsLock will gently remind you to take breaks and suggest physical activities.",
+  "howItWorksStep2Title": "Go to the gym and take a photo.",
+  "howItWorksStep2Desc": "Snap a picture of yourself at the gym with recognized equipment to verify your workout.",
   "trackProgress": "Track Progress",
   "trackProgressDesc": "Monitor your improvement over time with detailed analytics. See how your screen time has decreased while your gym attendance has increased.",
-  "earnRewards": "Earn Rewards",
-  "earnRewardsDesc": "Unlock achievements and earn digital rewards as you improve your screen-gym balance. Share your progress with friends for additional motivation.",
+  "howItWorksStep3Title": "Upload & Unlock.",
+  "howItWorksStep3Desc": "Instantly upload your gym photo through the app and see your extra screen time added to your daily allowance.",
   "readyJourney": "Ready to Start Your Journey?",
   "transformedUsers": "Join thousands of users who've transformed their relationship with technology and fitness using GymsLock.",
   
@@ -185,6 +185,15 @@ const translations = {
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "copyright": "© 2024 GymsLock. All rights reserved.",
+
+  // User Benefits Section
+  "userBenefitsTitle": "What You Gain with GymsLock",
+  "benefit1Title": "Never Miss Important Moments",
+  "benefit1Desc": "By reducing unproductive screen time, you have more energy for real life.",
+  "benefit2Title": "Beat Gym Procrastination",
+  "benefit2Desc": "The clear unlock mechanism gives you extra motivation to go to the gym, making exercise less of a chore.",
+  "benefit3Title": "Reclaim Focus & Productivity",
+  "benefit3Desc": "When your phone is no longer a distraction, you can concentrate better on work, studies, or spending time with family.",
 };
 
 export default translations; 

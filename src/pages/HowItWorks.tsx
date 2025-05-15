@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Download, Timer, Scan, LineChart, Zap, Smartphone } from "lucide-react";
+import { Smartphone, Camera, Lock, Unlock, ArrowUpCircle, Download, Timer, Scan, LineChart, Zap } from "lucide-react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
@@ -11,34 +11,19 @@ const HowItWorks = () => {
   
   const steps = [
     {
-      icon: <Download className="w-8 h-8 text-white" />,
-      title: t("downloadSetup"),
-      description: t("downloadSetupDesc")
+      icon: <Lock className="w-8 h-8 text-white" />,
+      title: t("howItWorksStep1Title"),
+      description: t("howItWorksStep1Desc")
     },
     {
-      icon: <Timer className="w-8 h-8 text-white" />,
-      title: t("setLimits"),
-      description: t("setLimitsDesc")
+      icon: <Camera className="w-8 h-8 text-white" />,
+      title: t("howItWorksStep2Title"),
+      description: t("howItWorksStep2Desc")
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-white" />,
-      title: t("getNotified"),
-      description: t("getNotifiedDesc")
-    },
-    {
-      icon: <Scan className="w-8 h-8 text-white" />,
-      title: t("visitGym"),
-      description: t("visitGymDesc")
-    },
-    {
-      icon: <LineChart className="w-8 h-8 text-white" />,
-      title: t("trackProgress"),
-      description: t("trackProgressDesc")
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: t("earnRewards"),
-      description: t("earnRewardsDesc")
+      icon: <Unlock className="w-8 h-8 text-white" />,
+      title: t("howItWorksStep3Title"),
+      description: t("howItWorksStep3Desc")
     }
   ];
 

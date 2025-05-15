@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Download from "@/components/Download";
 import Footer from "@/components/Footer";
+import UserBenefits from "@/components/UserBenefits";
 import { useRef, useEffect, useState } from "react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
 import { useLanguage } from "@/context/LanguageContext";
@@ -40,6 +41,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <UserBenefits />
         <DataVisualization />
         <Download />
         <Footer />
