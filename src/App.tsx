@@ -9,6 +9,8 @@ import FeaturesPage from "./pages/Features";
 import HowItWorks from "./pages/HowItWorks";
 import PricingPage from "./pages/Pricing";
 import PaymentSuccess from "./pages/PaymentSuccess";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import { LanguageProvider } from "./context/LanguageContext";
 import AnimatedBackground from "./components/AnimatedBackground";
 
@@ -30,6 +32,8 @@ const App = () => (
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/payment-success" element={<PaymentSuccess />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
               </Routes>
             </div>
           </div>
